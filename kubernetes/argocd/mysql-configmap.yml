@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysqlconfig
+data:
+  MYSQL_ROOT_PASSWORD: root123
+  MYSQL_DATABASE: st_website_7_4_test
