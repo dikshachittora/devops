@@ -18,6 +18,6 @@ spec:
         - name: liferay
           image: dikshaop/st-website-7.4-liferay:7.4.3.112-ga112
           ports:
-            - containerPort: 443
+            - containerPort: 8009
       imagePullSecrets:
       - name: docker-registry-secret    
