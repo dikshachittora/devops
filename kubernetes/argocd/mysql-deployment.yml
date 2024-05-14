@@ -13,7 +13,7 @@ spec:
       labels:
         app: mysql
     spec:
-      nodeName: st07061901
+      nodeName: st04
       containers:
       - name: mysql
         image: dikshaop/st-website-mysql:latest
