@@ -8,5 +8,5 @@ spec:
     app: liferay
   ports:
     - protocol: TCP
-      port: 443
-      targetPort: 443
+      port: 8009
+      targetPort: 8009
