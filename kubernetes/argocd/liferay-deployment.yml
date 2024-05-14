@@ -17,6 +17,11 @@ spec:
       containers:
         - name: liferay
           image: dikshaop/st-website-7.4-liferay:7.4.3.112-ga112
+          resources:
+            requests:
+              cpu: "3"
+            limits:
+              cpu: "3"
           ports:
             - containerPort: 8009
       imagePullSecrets:
