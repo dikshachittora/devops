@@ -13,7 +13,7 @@ spec:
       labels:
         app: elasticsearch
     spec:
-      nodeName: 
+      nodeName: st04
       containers:
         - name: elasticsearch
           image: dikshaop/elasticsearch_new:latest      
