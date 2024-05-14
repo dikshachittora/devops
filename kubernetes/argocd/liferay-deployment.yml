@@ -16,7 +16,7 @@ spec:
       nodeName: st07061901
       containers:
         - name: liferay
-          image: dikshaop/st-website-7.4-liferay:7.4.3.112-ga112
+          image: dikshaop/devops:devops-test-liferay7.4.3.112-ga112-1240
           resources:
             requests:
               cpu: "3"
