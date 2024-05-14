@@ -13,11 +13,4 @@ spec:
   storageClassName: local
   hostPath:
     path: /var/lib/mysql
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - local
+ 
