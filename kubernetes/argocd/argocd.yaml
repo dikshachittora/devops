@@ -1,0 +1,10 @@
+project: default
+source:
+  repoURL: 'https://github.com/dikshachittora/devops'
+  path: kubernetes/argocd
+  targetRevision: HEAD
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: st-website
+syncPolicy:
+  automated: {}
