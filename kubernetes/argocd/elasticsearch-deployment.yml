@@ -16,7 +16,7 @@ spec:
       nodeName: st22122101
       containers:
         - name: elasticsearch
-          image: dikshaop/devops:st-website-7-4-elasticsearch-test-1.1.1      
+          image: dikshaop/devops:exam-7-4-elasticsearch-test-1.1.1      
           ports:
             - containerPort: 9200
             - containerPort: 9300

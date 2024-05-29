@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mysql-deployment
-  namespace: st-website
+  namespace: exam
 spec:
   replicas: 1
   selector:
@@ -16,7 +16,7 @@ spec:
       nodeName: st07061901
       containers:
       - name: mysql
-        image: dikshaop/st-website-mysql:latest
+        image: dikshaop/exam-mysql:latest
         ports:
         - containerPort: 3306          
         volumeMounts:            

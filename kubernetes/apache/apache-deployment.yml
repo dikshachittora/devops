@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: apache-deployment
-  namespace: st-website
+  namespace: exam
 spec:
   replicas: 1
   selector:
