@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: apache-deployment
-  namespace: st-website
+  namespace: exam
 spec:
   replicas: 1
   selector:
@@ -13,11 +13,23 @@ spec:
       labels:
         app: apache
     spec:
+      nodeName: st04
       containers:
         - name: apache
-          image: dikshaop/devops:st-exam-7-4-apache-1242
+          image: dikshaop/devops:st-exam-apache-1247
           ports:
             - containerPort: 80
             - containerPort: 443
-
-         
+          volumeMounts:            
+            - name: apache-longhorn
+              mountPath: /usr/local/apache2/logs/
+      hostAliases:
+       - ip: 127.0.0.1
+         hostnames:
+         - test.surekhatech.us
+      imagePullSecrets:
+        - name: docker-registry-secret
+      volumes: 
+      - name: apache-longhorn
+        persistentVolumeClaim:
+          claimName: apache-pvc-longhorn

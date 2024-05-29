@@ -7,6 +7,7 @@ spec:
   selector:
     app: liferay
   ports:
-    - protocol: TCP
+    - name: ajp
+      protocol: TCP
       port: 8009
       targetPort: 8009

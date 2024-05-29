@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: liferay-deployment
-  namespace: st-website
+  namespace: exam
 spec:
   replicas: 1
   selector:
@@ -13,16 +13,28 @@ spec:
       labels:
         app: liferay
     spec:
-      nodeName: st07061901
+      nodeName: st04
       containers:
         - name: liferay
-          image: dikshaop/devops:devops-test-liferay7.4.3.112-ga112-1240
+          image: dikshaop/devops:st-website-7-4-liferay-test-1.1.2
           resources:
             requests:
-              cpu: "3"
+              cpu: "2"
             limits:
-              cpu: "3"
+              cpu: "2"
           ports:
             - containerPort: 8009
+          volumeMounts:
+            - mountPath: /opt/liferay/data
+              name: liferay-data-volume
+            - mountPath: /opt/liferay/tomcat/logs
+              name: liferay-logs-volume
       imagePullSecrets:
-      - name: docker-registry-secret    
+        - name: docker-registry-secret
+      volumes:
+        - name: liferay-data-volume
+          persistentVolumeClaim:
+            claimName: liferay-pvc-data
+        - name: liferay-logs-volume
+          persistentVolumeClaim:
+            claimName: liferay-pvc-logs
