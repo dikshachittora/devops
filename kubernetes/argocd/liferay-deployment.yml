@@ -16,7 +16,7 @@ spec:
       nodeName: st04
       containers:
         - name: liferay
-          image: dikshaop/devops:exam-7-4-liferay-test-1.1.2
+          image: dikshaop/devops:st-website-7-4-liferay-test-1.1.2
           resources:
             requests:
               cpu: "2"
@@ -32,9 +32,9 @@ spec:
       imagePullSecrets:
         - name: docker-registry-secret
       volumes:
-        - name: liferay-data-volume
-          persistentVolumeClaim:
-            claimName: liferay-pvc-data
         - name: liferay-logs-volume
           persistentVolumeClaim:
             claimName: liferay-pvc-logs
+        - name: liferay-data-volume
+          persistentVolumeClaim:
+            claimName: liferay-pvc-data
