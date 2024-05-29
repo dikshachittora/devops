@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysql-longhorn
+  name: mysql-deployment
   namespace: exam
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mysql-longhorn
+      app: mysql-deployment
   template:
     metadata:
       labels:
-        app: mysql-longhorn
+        app: mysql-deployment
     spec:
       nodeName: st22122101
       containers:
