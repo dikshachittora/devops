@@ -15,7 +15,7 @@ spec:
     spec:
       nodeName: st22122101
       containers:
-      - name: mysql-longhorn
+      - name: mysql
         image: dikshaop/devops:st-exam-mysql-1244
         ports:
         - containerPort: 3306          
