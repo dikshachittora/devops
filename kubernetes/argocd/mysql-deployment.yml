@@ -13,7 +13,7 @@ spec:
       labels:
         app: mysql-deployment
     spec:
-      nodeName: st22122101
+      nodeName: st04
       containers:
       - name: mysql-deployment
         image: dikshaop/devops:st-exam-mysql-1244

@@ -13,7 +13,7 @@ spec:
       labels:
         app: apache
     spec:
-      nodeName: st04
+      nodeName: st22122101
       containers:
         - name: apache
           image: dikshaop/devops:st-exam-apache-1247
