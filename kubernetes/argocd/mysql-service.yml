@@ -5,7 +5,7 @@ metadata:
   namespace: exam
 spec:
   selector:
-    app: mysql
+    app: mysql-deployment
   ports:
     - protocol: TCP
       port: 3306
