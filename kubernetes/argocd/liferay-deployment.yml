@@ -4,6 +4,8 @@ metadata:
   name: liferay-deployment
   namespace: exam
 spec:
+  securityContext:
+    fsGroup: 2000
   replicas: 1
   selector:
     matchLabels:
