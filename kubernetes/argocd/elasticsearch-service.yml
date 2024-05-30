@@ -5,7 +5,7 @@ metadata:
   namespace: exam
 spec:
   selector:
-    app: elasticsearch-service
+    app: elasticsearch
   ports:
   - protocol: TCP
     port: 9200
