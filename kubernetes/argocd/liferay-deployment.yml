@@ -14,7 +14,7 @@ spec:
         app: liferay
     spec:
       containers:
-      - image: dikshaop/devops:devops-test-liferay7.4.3.112-ga112-1378
+      - image: dikshaop/devops:st-website-7-4-liferay-test-1.1.2
         name: liferay
         ports:
         - containerPort: 8009
