@@ -27,4 +27,4 @@ spec:
       volumes: 
       - name: mysql-volume-longhorn
         persistentVolumeClaim:
-          claimName: mysql-longhorn
+          claimName: mysql-pvc-longhorn
